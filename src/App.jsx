@@ -9,7 +9,7 @@ import { routeTree } from "./routeTree.gen";
 
 const routerConstant = createRouter({
   routeTree,
-  defaultNotFoundComponent: () => <div>Global Not Found :</div>,
+  //  defaultNotFoundComponent: () => <div>Global Not Found :</div>,
 });
 
 

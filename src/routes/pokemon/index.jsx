@@ -4,6 +4,7 @@ import { getPokemons } from "../../api/pokemon";
 export const Route = createFileRoute("/pokemon/")({
   component: Pokemons,
   loader: getPokemons,
+  staleTime: 0
 });
 
 function Pokemons() {
@@ -17,9 +18,11 @@ function Pokemons() {
         {pokemons.map((pokemon) => (
           <li key={pokemon.id}>
             <Link
-              to=""
+              to={"/pokemon/$id"}
               className="text-blue-500"
-
+              params={{
+                id: pokemon.id,
+              }}
             >
               {pokemon.name}
             </Link>

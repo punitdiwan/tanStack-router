@@ -32,6 +32,11 @@ export const Header = () => {
             Pokemons
           </Link>
         </li>
+        <li>
+          <Link className={className} to="/users" activeProps={activeProps}>
+            Users
+          </Link>
+        </li>
       </ul>
     </div>
   );
